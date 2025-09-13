@@ -1,4 +1,4 @@
-# AbstractScreenSaver
+# ScreenSaverPlayer
 Have you ever wanted to embed custom video as a screensaver, but it turned out to be more complicated than it needed? </br>
 Worry no more! :) 
 
