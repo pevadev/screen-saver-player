@@ -4,10 +4,10 @@ Worry no more! :)
 
 ## Features
 Play your video across all of your screens (even supports playing audio)!</br>
-[preview](preview.gif)</br>
+![preview](preview.gif)</br>
 
 Customize based on your needs!</br>
-[settings](settings.png)
+![settings](settings.png)
 
 This app supports all of the mainstream video formats:</br>
 - MP4, MKV, AVI, MOV, FLV, WMV, WebM, TS, OGV
