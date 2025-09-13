@@ -14,7 +14,7 @@ This app supports all of the mainstream video formats:</br>
 - M4V, 3GP, F4V, VOB, MPEG/MPG
 
 ## Instalation
-- Install latest [.NET Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- Install latest [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 - Extract latest release into your desired folder (e.g. create "screensavers" folder in Videos and extract the app there)
 - Right click .scr file and click install
 - In "Screen Saver Settings" window click on "Settings..." button and select your video (enable sound, set volume)
