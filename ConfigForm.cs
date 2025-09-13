@@ -19,7 +19,9 @@ namespace ScreenSaverPlayer
         private void BrowseButton_Click(object? sender, EventArgs e)
         {
             using OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Filter = "MKV Video|*.mkv|All Files|*.*";
+            dlg.Filter =
+                "Video Files|*.mp4;*.mkv;*.avi;*.mov;*.flv;*.wmv;*.webm;*.ts;*.ogv;*.m4v;*.3gp;*.f4v;*.vob;*.mpeg;*.mpg|" +
+                "All Files|*.*";
 
             if (dlg.ShowDialog() == DialogResult.OK)
             {
