@@ -33,6 +33,9 @@ namespace ScreenSaverPlayer
         [DllImport("user32.dll", SetLastError = true)]
         private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
 
+        [DllImport("user32.dll", SetLastError = true)]
+        private static extern bool LockWorkStation();
+
         private const int GWL_STYLE = -16;
         private const int WS_CHILD = 0x40000000;
 
@@ -195,6 +198,17 @@ namespace ScreenSaverPlayer
 
         private static void CloseApp()
         {
+            if (SaverConfig.GetLockOnExit())
+            {
+                try
+                {
+                    LockWorkStation();
+                    // short delay to allow lock to engage
+                    System.Threading.Thread.Sleep(100);
+                }
+                catch { /* ignore failures */ }
+            }
+
             System.Diagnostics.Process.GetCurrentProcess().Kill();
         }   
     }

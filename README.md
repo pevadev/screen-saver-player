@@ -3,8 +3,9 @@ Have you ever wanted to embed custom video as a screensaver, but it turned out t
 Worry no more! :) 
 
 ## Features
-Play your video across all of your screens (even supports playing audio)!</br>
+Play your video across all of your screens (even supports playing audio and lock on exit)!</br>
 ![preview](preview.gif)</br>
+[Available on YouTube](https://www.youtube.com/watch?v=lH6qlF_iegU) (by Relaxation Time - 4K Amazing Relaxing Screensavers)
 
 Customize based on your needs!</br>
 ![settings](settings.png)

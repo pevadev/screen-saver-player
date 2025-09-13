@@ -11,6 +11,8 @@
         private System.Windows.Forms.CheckBox soundCheckBox;
         private System.Windows.Forms.Label volumeLabel;
         private System.Windows.Forms.TrackBar volumeBar;
+        private System.Windows.Forms.CheckBox lockOnExitCheckBox;
+
 
         protected override void Dispose(bool disposing)
         {
@@ -53,7 +55,7 @@
             // 
             // saveButton
             // 
-            saveButton.Location = new Point(297, 110);
+            saveButton.Location = new System.Drawing.Point(297, 145);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(75, 23);
             saveButton.TabIndex = 2;
@@ -63,7 +65,7 @@
             // 
             // cancelButton
             // 
-            cancelButton.Location = new Point(378, 110);
+            cancelButton.Location = new System.Drawing.Point(378, 145);
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new Size(75, 23);
             cancelButton.TabIndex = 3;
@@ -98,12 +100,22 @@
             volumeBar.TabIndex = 0;
             volumeBar.TickFrequency = 10;
             volumeBar.Value = 50;
+            //
+            // lockOnExitCheckBox
+            //
+            this.lockOnExitCheckBox = new System.Windows.Forms.CheckBox();
+            this.lockOnExitCheckBox.Location = new System.Drawing.Point(12, 115);
+            this.lockOnExitCheckBox.Name = "lockOnExitCheckBox";
+            this.lockOnExitCheckBox.Size = new System.Drawing.Size(200, 24);
+            this.lockOnExitCheckBox.Text = "Lock account on exit";
+            this.lockOnExitCheckBox.UseVisualStyleBackColor = true;
+            this.Controls.Add(this.lockOnExitCheckBox);
             // 
             // ConfigForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(465, 145);
+            ClientSize = new System.Drawing.Size(465, 185);
             Controls.Add(volumeBar);
             Controls.Add(volumeLabel);
             Controls.Add(soundCheckBox);

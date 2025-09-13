@@ -14,6 +14,13 @@ namespace ScreenSaverPlayer
 
             soundCheckBox.Checked = SaverConfig.IsSoundEnabled();
             volumeBar.Value = SaverConfig.GetVolume();
+            soundCheckBox.CheckedChanged += (s, e) =>
+            {
+                volumeBar.Enabled = soundCheckBox.Checked;
+            };
+            volumeBar.Enabled = soundCheckBox.Checked;
+            
+            lockOnExitCheckBox.Checked = SaverConfig.GetLockOnExit();
         }
 
         private void BrowseButton_Click(object? sender, EventArgs e)
@@ -37,6 +44,7 @@ namespace ScreenSaverPlayer
                 SaverConfig.SetVideoPath(path);
                 SaverConfig.SetEnableSound(soundCheckBox.Checked);
                 SaverConfig.SetVolume(volumeBar.Value);
+                SaverConfig.SetLockOnExit(lockOnExitCheckBox.Checked);
 
                 MessageBox.Show("Settings saved in registry.", "Configuration");
                 Close();

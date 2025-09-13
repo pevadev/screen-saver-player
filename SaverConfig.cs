@@ -6,6 +6,7 @@ public static class SaverConfig
     private const string VideoPathValue = "VideoPath";
     private const string EnableSoundValue = "EnableSound";
     private const string VolumeValue = "Volume";
+    private const string LockOnExitValue = "LockOnExit";
 
     public static void SetVideoPath(string path)
     {
@@ -43,5 +44,18 @@ public static class SaverConfig
         using var key = Registry.CurrentUser.OpenSubKey(RegistryKeyPath);
         object? value = key?.GetValue(VolumeValue);
         return value is int intVal ? Math.Clamp(intVal, 0, 100) : 50; // default 50%
+    }
+
+    public static void SetLockOnExit(bool lockOnExit)
+    {
+        using var key = Registry.CurrentUser.CreateSubKey(RegistryKeyPath);
+        key?.SetValue(LockOnExitValue, lockOnExit ? 1 : 0, RegistryValueKind.DWord);
+    }
+
+    public static bool GetLockOnExit()
+    {
+        using var key = Registry.CurrentUser.OpenSubKey(RegistryKeyPath);
+        object? value = key?.GetValue(LockOnExitValue);
+        return value is int intVal && intVal == 1;
     }
 }
