@@ -95,7 +95,6 @@ namespace ScreenSaverPlayer
 
             // this.SizeChanged += VideoView_SizeChanged;
             _videoView.Resize += (_, __) => ApplyStretchAspect();
-            _videoView.MouseMove += SaverForm_MouseMove;
 
             if (_previewMode && previewHandle != IntPtr.Zero)
             {
@@ -122,7 +121,6 @@ namespace ScreenSaverPlayer
 
                 KeyDown += SaverForm_KeyDown;
                 MouseMove += SaverForm_MouseMove;
-                MouseClick += (_, __) => CloseApp();
                 _lastMousePosition = Cursor.Position;
             }
 
